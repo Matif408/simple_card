@@ -1,0 +1,161 @@
+/* variable */
+:root{
+    --gutter_horizontal: 3rem;
+}
+/* reset */
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.25%;
+}
+body{
+    font-family: 'Lato' ,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+
+}
+a{
+    display: inline;
+    text-decoration: none;
+}
+button{
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+}
+.parent{
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom , rgba(166, 166, 207, 0.6),rgba(23, 23, 202, 0.8));
+    position: relative;
+    
+}
+/* grid */
+.row{
+    max-width: 114rem;
+     width: 100%;
+     
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: white;  */
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col-1-of-3{
+    width: calc((100% - 2 * var(--gutter_horizontal))/3);
+    float: left;
+}
+.col-1-of-3:not(:last-child){
+    margin-right: var(--gutter_horizontal);
+}
+
+.column_properties{
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-height: 70rem;
+    min-height: 56rem;
+    position: relative;
+}
+/* card style */
+.figure{
+    /* background-color: black; */
+    min-height: 17rem;
+    margin-bottom: 1rem;
+}
+.img{
+    min-height:17rem;
+    width: 100%;
+    object-fit: cover;
+}
+.btn{
+    text-transform: capitalize;
+    color: white;
+    padding: .5rem .8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.btn_1{
+    background-color: rgb(85, 85, 233);
+}
+.btn_2{
+    background-color: rgb(211, 109, 41);
+}
+.btn_3{
+    background-color: crimson;
+}
+.description{
+    padding: 0 1.5rem;
+}
+.heading_secondary{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+.card_text{
+    color: rgb(70, 66, 66);
+    text-align: justify;
+    margin-bottom: 6rem;
+}
+.information{
+    margin-bottom: 3rem;
+    
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+}
+
+.fig_person{
+    display: inline-block;
+    min-height: 5rem;
+    color: black;
+    max-width: 5rem;
+}
+.img2{
+    min-height: 5rem;
+    width: 100%;
+    border-radius: 50%;
+}
+.span_element{
+    display: inline-block;
+    position: absolute;
+    left:6rem;
+    bottom: 1rem;
+    min-width: 10rem;
+    
+}
+span{
+    display: block;
+}
+
+.name{
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.time{
+    color: rgb(53, 50, 50);
+    
+}
+@media(max-width:977px){
+    html{
+        font-size: 8px;
+    }
+}
+@media (max-width:785px){
+    .col-1-of-3:last-child{
+        float: none;
+    }
+}
